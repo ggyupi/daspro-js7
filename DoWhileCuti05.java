@@ -16,26 +16,32 @@ public class DoWhileCuti05 {
         do {
             System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
             konfirmasi = scan.next();
-            
-            if (konfirmasi.equalsIgnoreCase("y")) {
-                System.out.print("Jumlah hari : ");
-                jumlahHari = scan.nextInt();
-            
-            if (jumlahHari <= jatahCuti) {
-                jatahCuti -= jumlahHari;
-                System.out.println("Sisa jatah cuti : " + jatahCuti);
 
-            } else {
-                System.out.println("Sisa jatah cuti anda tidak mencukupi");
+            if (konfirmasi.equalsIgnoreCase("t"))
+                break;
+                
+                else if (konfirmasi.equalsIgnoreCase("y")) {
+                    System.out.print("Jumlah hari : ");
+                    jumlahHari = scan.nextInt();
                     
-                    System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
-                    konfirmasi = scan.next();
-
-                    if (konfirmasi.equalsIgnoreCase("y")) {
+                    if (jumlahHari <= jatahCuti) {
+                        jatahCuti -= jumlahHari;
+                        System.out.println("Sisa jatah cuti : " + jatahCuti);
+                        
+                    } else {
+                        System.out.println("Sisa jatah cuti anda tidak mencukupi");
+                        
+                        System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
+                        konfirmasi = scan.next();
+                        
+                        if (konfirmasi.equalsIgnoreCase("t"))
+                            break;
+                        
+                            else if (konfirmasi.equalsIgnoreCase("y")) {
                         System.out.print("Jumlah hari : ");
                         jumlahHari = scan.nextInt();
 
-                    if (jumlahHari <= jatahCuti) {
+                            if (jumlahHari <= jatahCuti) {
                         jatahCuti -= jumlahHari;
                         System.out.println("Sisa jatah cuti : " + jatahCuti);
                     } else {
