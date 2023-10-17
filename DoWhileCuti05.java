@@ -27,11 +27,28 @@ public class DoWhileCuti05 {
 
             } else {
                 System.out.println("Sisa jatah cuti anda tidak mencukupi");
-                break;
+                    
+                    System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
+                    konfirmasi = scan.next();
+
+                    if (konfirmasi.equalsIgnoreCase("y")) {
+                        System.out.print("Jumlah hari : ");
+                        jumlahHari = scan.nextInt();
+
+                    if (jumlahHari <= jatahCuti) {
+                        jatahCuti -= jumlahHari;
+                        System.out.println("Sisa jatah cuti : " + jatahCuti);
+                    } else {
+                        System.out.println("Sisa jatah cuti anda tidak mencukupi");
+                        break;
+                    }
+
+                    }
+                
             }
-        }
-    }
+                }
+            }
     while (jatahCuti > 0);
     scan.close();
-}
-}
+        }
+    }
